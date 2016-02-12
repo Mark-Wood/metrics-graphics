@@ -3877,7 +3877,6 @@ MG.button_layout = function(target) {
 
     this.rollover = function() {
       var svg = mg_get_svg_child_of(args.target);
-      var $svg = $($(args.target).find('svg').get(0));
 
       //remove the old rollovers if they already exist
       svg.selectAll('.mg-rollover-rect').remove();
@@ -5556,7 +5555,7 @@ function add_ls(args) {
 MG.add_ls = add_ls;
 
 function add_lowess(args) {
-  var svg = d3.select($(args.target).find('svg').get(0));
+  var svg = mg_get_svg_child_of(args.target);
   var lowess = args.lowess_line;
 
   var line = d3.svg.line()

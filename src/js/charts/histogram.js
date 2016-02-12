@@ -69,7 +69,6 @@
 
     this.rollover = function() {
       var svg = mg_get_svg_child_of(args.target);
-      var $svg = $($(args.target).find('svg').get(0));
 
       //remove the old rollovers if they already exist
       svg.selectAll('.mg-rollover-rect').remove();
